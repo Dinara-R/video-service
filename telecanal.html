@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Телеканалы/фильмы</title>
+</head>    
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <form>
+                <input class="header__search-txt" type="text" placeholder="Поиск">
+                <input class="header__search-btn" type="button" value="Найти">
+            </form>
+             <div class="header__auth-guest" id="guestHeader">
+                <button class="header__auth-btn" id="openModalBtn" type="button">Войти</button>
+            </div> 
+            <div class="header__auth-user hidden-block" id="userHeader">
+                <span class="header__user-name" id="userNameDisplay">Динара Р.</span>
+                <button class="header__logout-btn" id="logoutBtn" type="button">Выйти</button>
+            </div>
+        </header>
+        <main> 
+            <nav class="nav">
+                <a class="nav__a" href="index.html">Фильмы</a>
+                <a class="nav__a active" href="telecanal.html">Телеканалы</a>
+            </nav>
+            <div class="channels">
+                <div class="channel">
+                    <div class="channel__logo">
+                        <img src="images/1st.png" alt="Первый канал">
+                    </div>
+                    <div class="channel__info">
+                        <h1 class="channel__name">Первый канал</h1> 
+                        <div class="channel__program">
+                            <span class="channel__time">13:00</span>
+                            <span class="channel__title">Новости (с субтитрами)</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">14:00</span>
+                            <span class="channel__title">Давай поженимся</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">15:00</span>
+                            <span class="channel__title">Другие новости</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__logo">
+                        <img src="images/logo-2.png" alt="2х2">
+                    </div>
+                    <div class="channel__info">
+                        <h2 class="channel__name">2х2</h2>
+                        <div class="channel__program">
+                            <span class="channel__time">13:00</span>
+                            <span class="channel__title">МУЛЬТ ТВ. Сезон 4, 7 серия</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">14:00</span>
+                            <span class="channel__title">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">15:00</span>
+                            <span class="channel__title">БУРДАШЕВ. Сезон 1, 20 серия</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__logo">
+                        <img src="images/rbc.png" alt="РБК">
+                    </div>
+                    <div class="channel__info">
+                        <h3 class="channel__name">РБК</h3>
+                        <div class="channel__program">
+                            <span class="channel__time">13:00</span>
+                            <span class="channel__title">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">14:00</span>
+                            <span class="channel__title">ДЕНЬ. Главные темы</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">15:00</span>
+                            <span class="channel__title">Главные новости</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="channel">
+                    <div class="channel__logo">
+                        <img src="images/vector.png" alt="AMEDIA PREMIUM">
+                    </div>
+                    <div class="channel__info">
+                        <h3 class="channel__name">AMEDIA PREMIUM</h3>
+                        <div class="channel__program">
+                            <span class="channel__time">13:00</span>
+                            <span class="channel__title">Клиент всегда мёртв</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">14:00</span>
+                            <span class="channel__title">Голодные игры: Сойка-пересмешница. Часть I</span>
+                        </div>
+                        <div class="channel__program">
+                            <span class="channel__time">15:00</span>
+                            <span class="channel__title">Секс в большом городе</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer__logo">
+                <img src="images/htc-cs-logo.png" alt="logo"> 
+            </div>
+            <div class="footer__info">
+                <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК Металург)</p>
+                <p>+7 (3412) 93-88-61, 43-29-29</p>
+                <p>htc-cs.ru</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal__close" id="closeModalBtn" type="button">&times;</button>
+            <h2 class="modal__title">Вход</h2>
+            <form onsubmit="return false;">
+                <div class="modal__field">
+                    <input class="modal__input" type="text" placeholder="Логин">
+                </div>
+                <div class="modal__field">
+                    <input class="modal__input" type="password" placeholder="Пароль">
+                </div>
+                <div class="modal__checkbox">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Запомнить</label>
+                </div>
+                <button class="modal__submit" type="submit">Войти</button>
+            </form>
+        </div> 
+    </div> 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('loginModal');
+    var openBtn = document.getElementById('openModalBtn');
+    var closeBtn = document.getElementById('closeModalBtn');
+    
+    var guestHeader = document.getElementById('guestHeader');
+    var userHeader = document.getElementById('userHeader');
+    var userNameDisplay = document.getElementById('userNameDisplay');
+    var logoutBtn = document.getElementById('logoutBtn');
+    var loginForm = document.querySelector('.modal form');
+
+    var savedUser = localStorage.getItem('loggedInUser');
+    
+    if (savedUser) {
+        guestHeader.style.display = 'none';
+        userHeader.classList.remove('hidden-block');
+        userHeader.style.display = 'flex';
+        userNameDisplay.textContent = savedUser;
+    }
+
+    openBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    }); 
+
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var loginInput = document.querySelector('.modal__input[type="text"]').value;
+        var passwordInput = document.querySelector('.modal__input[type="password"]').value;
+
+        if (loginInput.trim() !== '' && passwordInput.trim() !== '') {
+            var nameToShow = 'Динара Р.';
+            
+            guestHeader.style.display = 'none';
+            userHeader.classList.remove('hidden-block');
+            userHeader.style.display = 'flex'; 
+            userNameDisplay.textContent = nameToShow;
+            modal.style.display = 'none';
+            loginForm.reset();
+
+            localStorage.setItem('loggedInUser', nameToShow);
+        } else {
+            alert('Пожалуйста, заполните логин и пароль!');
+        }
+    });
+
+    logoutBtn.addEventListener('click', function() {
+        userHeader.style.display = 'none';
+        userHeader.classList.add('hidden-block');
+        guestHeader.style.display = 'flex'; 
+        
+        localStorage.removeItem('loggedInUser');
+    });
+});
+    </script>
+</body>
+</html> 

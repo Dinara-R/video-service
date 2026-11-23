@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Телеканалы/фильмы</title>
+</head>    
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_logo">
+                <img src="images/logo.png" alt="logo"> 
+            </div>
+            <form> 
+                <input class="header__search-txt" type="text" placeholder="Поиск">
+                <input class="header__search-btn" type="button" value="Найти">
+            </form>
+            <div class="header__auth-guest" id="guestHeader">
+    <button class="header__auth-btn" id="openModalBtn" type="button">Войти</button>
+</div>
+<div class="header__auth-user" id="userHeader" style="display: none;">
+    <span class="header__user-name" id="userNameDisplay">Динара Р.</span>
+    <button class="header__logout-btn" id="logoutBtn" type="button">Выйти</button>
+</div>
+        </header>
+        <main> 
+            <nav class="nav">
+                <a class="nav__a active" href="index.html">Фильмы</a>
+                <a class="nav__a" href="telecanal.html">Телеканалы</a> 
+            </nav>
+            <div class="gallery">
+                <h1 class="gallery__new">&#128293; Новинки</h1> 
+                <div class="gallery__movie">
+                    <div class="gallery__movie-item">
+                        <img class="gallery__movie-item-img" src="images/cat.jpg" alt="cat"> 
+                        <p class="gallery__movie-item-desc">Фильм повествует о 
+                            череде событий, произошедших в Голливуде в 1969 году, на 
+                            закате его золотого века. Известный актер Рик Далтон и 
+                            его дублер Клифф Бут пытаются найти свое место в 
+                            стремительно меняющемся мире киноиндустрии.</p>
+                        <p class="gallery__movie-item-p">Мульт в кино. Выпуск №103. Некогда грустить!</p>
+                    </div>
+                    <div class="gallery__movie-item">
+                        <img class="gallery__movie-item-img" src="images/batman.jpg" alt="batman">
+                        <p class="gallery__movie-item-desc">Фильм повествует о 
+                            череде событий, произошедших в Голливуде в 1969 году, на 
+                            закате его золотого века. Известный актер Рик Далтон и 
+                            его дублер Клифф Бут пытаются найти свое место в 
+                            стремительно меняющемся мире киноиндустрии.</p>
+                        <p class="gallery__movie-item-p">Новый Бэтмен</p>
+                    </div>
+                    <div class="gallery__movie-item">
+                        <img class="gallery__movie-item-img" src="images/hollywood.png" alt="hollywood">
+                        <p class="gallery__movie-item-desc">Фильм повествует о 
+                            череде событий, произошедших в Голливуде в 1969 году, на 
+                            закате его золотого века. Известный актер Рик Далтон и 
+                            его дублер Клифф Бут пытаются найти свое место в 
+                            стремительно меняющемся мире киноиндустрии.</p>
+                        <p class="gallery__movie-item-p">Однажды в Голливуде</p>
+                    </div>
+                    <div class="gallery__movie-item">
+                        <img class="gallery__movie-item-img" src="images/girls.jpg" alt="girl">
+                        <p class="gallery__movie-item-desc">Фильм повествует о 
+                            череде событий, произошедших в Голливуде в 1969 году, на 
+                            закате его золотого века. Известный актер Рик Далтон и 
+                            его дублер Клифф Бут пытаются найти свое место в 
+                            стремительно меняющемся мире киноиндустрии.</p>
+                        <p class="gallery__movie-item-p">Стриптизерши</p>
+                    </div>
+                </div>
+            </div> 
+            <div class="genres">
+                <p class="genres-new">Жанры</p>
+                <div class="genres-gall">
+                    <div class="genre comedy">
+                        <p class="genre__emj">&#128513;</p>
+                        <p class="genre__p">Комедии</p>
+                    </div>
+                    <div class="genre drama">
+                        <p class="genre__emj">&#128557;</p>
+                        <p class="genre__p">Драмы</p>
+                    </div>
+                    <div class="genre fant">
+                        <p class="genre__emj">&#128125;</p>
+                        <p class="genre__p">Фантастика</p>
+                    </div>
+                    <div class="genre scream">
+                        <p class="genre__emj">&#128123;</p>
+                        <p class="genre__p">Ужасы</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer__logo">
+                <img src="images/htc-cs-logo.png" alt="logo"> 
+            </div>
+            <div class="footer__info">
+                <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК Металург)</p>
+                <p>+7 (3412) 93-88-61, 43-29-29</p>
+                <p>htc-cs.ru</p>
+            </div>
+        </div>
+    </footer>
+        <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <button class="modal__close" id="closeModalBtn" type="button">&times;</button>
+            <h2 class="modal__title">Вход</h2>
+            <form onsubmit="return false;">
+                <div class="modal__field">
+                    <input class="modal__input" type="text" placeholder="Логин">
+                </div>
+                <div class="modal__field">
+                    <input class="modal__input" type="password" placeholder="Пароль">
+                </div>
+                <div class="modal__checkbox">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Запомнить</label>
+                </div>
+                <button class="modal__submit" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+    <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('loginModal');
+    var openBtn = document.getElementById('openModalBtn');
+    var closeBtn = document.getElementById('closeModalBtn');
+    
+    var guestHeader = document.getElementById('guestHeader');
+    var userHeader = document.getElementById('userHeader');
+    var userNameDisplay = document.getElementById('userNameDisplay');
+    var logoutBtn = document.getElementById('logoutBtn');
+    var loginForm = document.querySelector('.modal form');
+
+    var savedUser = localStorage.getItem('loggedInUser');
+    
+    if (savedUser) {
+        guestHeader.style.display = 'none';
+        userHeader.classList.remove('hidden-block');
+        userHeader.style.display = 'flex';
+        userNameDisplay.textContent = savedUser;
+    }
+
+    openBtn.addEventListener('click', function() {
+        modal.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var loginInput = document.querySelector('.modal__input[type="text"]').value;
+        var passwordInput = document.querySelector('.modal__input[type="password"]').value;
+
+        if (loginInput.trim() !== '' && passwordInput.trim() !== '') {
+            var nameToShow = 'Динара Р.';
+            
+            guestHeader.style.display = 'none';
+            userHeader.classList.remove('hidden-block');
+            userHeader.style.display = 'flex'; 
+            userNameDisplay.textContent = nameToShow;
+            modal.style.display = 'none';
+            loginForm.reset();
+
+            localStorage.setItem('loggedInUser', nameToShow);
+        } else {
+            alert('Пожалуйста, заполните логин и пароль!');
+        }
+    });
+
+    logoutBtn.addEventListener('click', function() {
+        userHeader.style.display = 'none';
+        userHeader.classList.add('hidden-block');
+        guestHeader.style.display = 'flex'; 
+        
+        localStorage.removeItem('loggedInUser');
+    });
+});  
+</script> 
+</body> 
+</html> 
