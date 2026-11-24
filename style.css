@@ -675,3 +675,23 @@ body {
     align-items: center;
     border-color: #333;
 } 
+
+.channel__time {
+    color: #333;
+    font-family: 'rubik-reg', sans-serif;
+    min-width: 45px;
+    font-weight: 500; 
+}
+
+.channel__title {
+    color: #333; 
+    font-family: 'rubik-reg', sans-serif;
+}
+
+.channel__time--red {
+    color: #e52;
+}
+
+.channel__title--red {
+    color: #e52; 
+} 
